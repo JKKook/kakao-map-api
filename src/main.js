@@ -11,7 +11,9 @@ const mapContainer = document.getElementById("map"), // 지도를 표시할 div
 // 지도를 생성한다
 const map = new kakao.maps.Map(mapContainer, mapOption);
 
-
+const mapTypeControl = new kakao.maps.MapTypeControl();
+// 지도 타입 컨트롤을 지도에 표시합니다
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
 const zoomControl = new kakao.maps.ZoomControl();
